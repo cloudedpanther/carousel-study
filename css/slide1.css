@@ -1,0 +1,195 @@
+.slide1-window {
+    width: 500px;
+    height: 375px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide1-radio {
+    display: none;
+}
+
+.slide1-controls {
+    width: 500px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.slide1-control {
+    display: none;
+}
+
+input[id="slide-01--first"]:checked
+~ .slide1-controls
+#control-01--first {
+    display: block;
+}
+
+input[id="slide-02--first"]:checked
+~ .slide1-controls
+#control-02--first {
+    display: block;
+}
+
+input[id="slide-03--first"]:checked
+~ .slide1-controls
+#control-03--first {
+    display: block;
+}
+
+input[id="slide-01--second"]:checked
+~ .slide1-controls
+#control-01--second {
+    display: block;
+}
+
+input[id="slide-02--second"]:checked
+~ .slide1-controls
+#control-02--second {
+    display: block;
+}
+
+input[id="slide-03--second"]:checked
+~ .slide1-controls
+#control-03--second {
+    display: block;
+}
+
+.prev-button,
+.next-button {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    margin: 0 20px;
+    color: gray;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
+
+.slide1-container {
+    display: flex;
+}
+
+.slide1-items {
+    display: flex;
+}
+
+.slide1-item {
+    width: 500px;
+    height: 375px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+    flex-shrink: 0;
+    transition: transform .5s;
+}
+
+#slide1-items--second
+.slide1-item {
+    background-color: thistle;
+}
+
+/* first slide chunk animation */
+input[id="slide-01--first"]:checked
+~ .slide1-container
+#slide1-items--first
+.slide1-item {
+    z-index: 5;
+    transform: translateX(0%);
+}
+
+input[id="slide-01--first"]:checked
+~ .slide1-container
+#slide1-items--second
+.slide1-item {
+    transform: translateX(-600%);
+}
+
+input[id="slide-02--first"]:checked
+~ .slide1-container
+#slide1-items--first
+.slide1-item {
+    transform: translateX(-100%);
+}
+
+input[id="slide-02--first"]:checked
+~ .slide1-container
+#slide1-items--second
+.slide1-item {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+input[id="slide-03--first"]:checked
+~ .slide1-container
+#slide1-items--first
+.slide1-item {
+    transform: translateX(-200%);
+}
+
+input[id="slide-03--first"]:checked
+~ .slide1-container
+#slide1-items--second
+.slide1-item {
+    transform: translateX(-200%);
+}
+
+/* second slide chunk animation */
+input[id="slide-01--second"]:checked
+~ .slide1-container
+#slide1-items--second
+.slide1-item {
+    transform: translateX(-300%);
+}
+
+input[id="slide-01--second"]:checked
+~ .slide1-container
+#slide1-items--first
+.slide1-item {
+    transform: translateX(-300%);
+}
+
+input[id="slide-02--second"]:checked
+~ .slide1-container
+#slide1-items--second
+.slide1-item {
+    transform: translateX(-400%);
+}
+
+input[id="slide-02--second"]:checked
+~ .slide1-container
+#slide1-items--first
+.slide1-item {
+    opacity: 0;
+    transform: translateX(200%);
+}
+
+input[id="slide-03--second"]:checked
+~ .slide1-container
+#slide1-items--second
+.slide1-item {
+    transform: translateX(-500%);
+}
+
+input[id="slide-03--second"]:checked
+~ .slide1-container
+#slide1-items--first
+.slide1-item {
+    transform: translateX(100%);
+}

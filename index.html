@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/4c7d6be256.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Carousels</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="slide1-window">
+        <input
+          class="slide1-radio"
+          type="radio"
+          id="slide-01--first"
+          name="slide"
+          checked
+        />
+        <input
+          class="slide1-radio"
+          type="radio"
+          id="slide-02--first"
+          name="slide"
+        />
+        <input
+          class="slide1-radio"
+          type="radio"
+          id="slide-03--first"
+          name="slide"
+        />
+
+        <input
+          class="slide1-radio"
+          type="radio"
+          id="slide-01--second"
+          name="slide"
+        />
+        <input
+          class="slide1-radio"
+          type="radio"
+          id="slide-02--second"
+          name="slide"
+        />
+        <input
+          class="slide1-radio"
+          type="radio"
+          id="slide-03--second"
+          name="slide"
+        />
+
+        <div class="slide1-controls">
+          <div class="slide1-control" id="control-01--first">
+            <label for="slide-03--second" class="prev-button">
+              <i class="fa-solid fa-chevron-left"></i>
+            </label>
+            <label for="slide-02--first" class="next-button">
+              <i class="fa-solid fa-chevron-right"></i>
+            </label>
+          </div>
+          <div class="slide1-control" id="control-02--first">
+            <label for="slide-01--first" class="prev-button">
+              <i class="fa-solid fa-chevron-left"></i>
+            </label>
+            <label for="slide-03--first" class="next-button">
+              <i class="fa-solid fa-chevron-right"></i>
+            </label>
+          </div>
+          <div class="slide1-control" id="control-03--first">
+            <label for="slide-02--first" class="prev-button">
+              <i class="fa-solid fa-chevron-left"></i>
+            </label>
+            <label for="slide-01--second" class="next-button">
+              <i class="fa-solid fa-chevron-right"></i>
+            </label>
+          </div>
+
+          <div class="slide1-control" id="control-01--second">
+            <label for="slide-03--first" class="prev-button">
+              <i class="fa-solid fa-chevron-left"></i>
+            </label>
+            <label for="slide-02--second" class="next-button">
+              <i class="fa-solid fa-chevron-right"></i>
+            </label>
+          </div>
+          <div class="slide1-control" id="control-02--second">
+            <label for="slide-01--second" class="prev-button">
+              <i class="fa-solid fa-chevron-left"></i>
+            </label>
+            <label for="slide-03--second" class="next-button">
+              <i class="fa-solid fa-chevron-right"></i>
+            </label>
+          </div>
+          <div class="slide1-control" id="control-03--second">
+            <label for="slide-02--second" class="prev-button">
+              <i class="fa-solid fa-chevron-left"></i>
+            </label>
+            <label for="slide-01--first" class="next-button">
+              <i class="fa-solid fa-chevron-right"></i>
+            </label>
+          </div>
+        </div>
+
+        <div class="slide1-container">
+          <div class="slide1-items" id="slide1-items--first">
+            <div class="slide1-item" id="slide-item-01--first">1</div>
+            <div class="slide1-item" id="slide-item-02--first">2</div>
+            <div class="slide1-item" id="slide-item-03--first">3</div>
+          </div>
+
+          <div class="slide1-items" id="slide1-items--second">
+            <div class="slide1-item" id="slide-item-01--second">1</div>
+            <div class="slide1-item" id="slide-item-02--second">2</div>
+            <div class="slide1-item" id="slide-item-03--second">3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="slide2-window">
+        <div class="slide2-controls">
+          <button class="prev-button">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="next-button">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="slide2-container"></div>
+      </div>
+    </div>
+  </body>
+</html>
